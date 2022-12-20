@@ -27,7 +27,7 @@ h1 {
     color: #fff;
     /* text-shadow 효과를 통해서 글자 반짝이는 것처럼 보여주는 부분 */
     text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px rgb(83, 72, 236),
-      0 0 82px rgb(83, 72, 236), 0 0 92px rgb(83, 72, 236), 0 0 102px rgb(83, 72, 236), 0 0 151px rgb(83, 72, 236);
+        0 0 82px rgb(83, 72, 236), 0 0 92px rgb(83, 72, 236), 0 0 102px rgb(83, 72, 236), 0 0 151px rgb(83, 72, 236);
 }
 
 .select__box {
@@ -76,7 +76,14 @@ h1 {
     height: auto;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
     flex-direction: column;
     margin-top: 2rem;
+    overflow: auto;
+    background-color: #fff;
+    padding-left: 2rem;
+}
+
+.text__box p {
+    font-size: 1.5rem;
 }
