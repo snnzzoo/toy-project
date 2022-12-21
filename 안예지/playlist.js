@@ -15,7 +15,10 @@ let editID = "";
 // submit form
 form.addEventListener('submit', addItem)
 // 모두 지우기
-clearBtn.addEventListener('click', clearItems)
+clearBtn.addEventListener('click', clearItems);
+
+const deleteBtn = document.querySelector('.delete-btn');
+console.log(deleteBtn);
 // 콜백함수 addItem를 따로 작성
 function addItem(e) {
     // form의 기본 이벤트를 제거한다.
@@ -56,6 +59,11 @@ function addItem(e) {
                 </span>
             </button>
         </div>`);
+        const deleteBtn = element.querySelector('.delete-btn')
+        const editBtn = element.querySelector('.edit-btn');
+        deleteBtn.addEventListener('click', deleteItem);
+        editBtn.addEventListener('click', editItem);
+
         // append child
         list.appendChild(element);
         // display alert
@@ -70,7 +78,12 @@ function addItem(e) {
     }
     // 빈 문자열이 아니고, 편집모드인 경우
     else if (value && editFlag) {
-        console.log('editing')
+        // console.log('editing')
+        editElement.innerHTML = value;
+        displayAlert('값이 편집되었습니다.', 'success');
+        // edit local storage
+        editLocalStorage(editID, value);
+        setBackToDefault();
     }
     // 그 밖의 경우
     else {
@@ -107,6 +120,33 @@ function clearItems() {
     setBackToDefault();
     // localStorage.removeItem('list');
 }
+// delete function
+function deleteItem(e) {
+    // console.log('item deleted');
+    const element = e.currentTarget.parentElement.parentElement;
+    const id = element.dataset.id;
+    list.removeChild(element);
+    if (list.children.length === 0) {
+        container.classList.remove('show-container');
+    }
+    displayAlert('항목이 삭제되었습니다', 'danger');
+    setBackToDefault();
+    // remove from local storage
+    // removeFromLocalStorage(id);
+}
+// edit function
+function editItem(e) {
+    // console.log('edit item');
+    const element = e.currentTarget.parentElement.parentElement;
+    // set edit item
+    editElement = e.currentTarget.parentElement.previousElementSibling;
+    // set form value
+    playlist.value = editElement.innerHTML;
+    editFlag = true;
+    editID = element.dataset.id;
+    submitBtn.textContent = '완료';
+
+}
 /* set back to default 폼을 초기화한다?
 (편집 모드를 종료하고, 추가 버튼의 값도 초기화) */
 function setBackToDefault() {
@@ -120,4 +160,11 @@ function setBackToDefault() {
 function addToLocalStorage(id, value) {
     console.log('added to local storage');
 }
+function removeFromLocalStorage(id) { }
+function editLocalStorage(id, value) { }
+// localStorage API
+// setItem
+// getItem
+// removeItem
+// save as strings
 // *********** SETUP ITEMS ***********
