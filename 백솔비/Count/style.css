@@ -5,44 +5,40 @@
 }
 
 .container {
-  width: 400px;
-  /* height: 600px; */
-  margin: 0 auto;
   position: relative;
   top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
+  width: 400px;
+  margin: 0 auto;
   transform: translateY(-50%);
 }
 
 .title {
-  color: white;
-  font-size: 3rem;
   margin: 0;
   text-align: center;
+  font-size: 3rem;
+  color: white;
 }
 
 .count__container {
-  margin-top: 1rem;
   display: flex;
   justify-content: center;
+  margin-top: 1rem;
 }
 
 .days,
 .hours,
 .mins,
 .secs {
+  display: flex;
+  flex-direction: column;
   width: 200px;
   height: 100px;
-  display: flex;
   margin: 0 1rem;
   padding: 0.7rem;
-  flex-direction: column;
-
+  text-align: center;
   font-size: 3.5rem;
   font-weight: 600;
   color: white;
-  text-align: center;
 }
 
 .subTitle {
