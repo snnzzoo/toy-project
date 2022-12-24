@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tabs</title>
+
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <section class="section">
+      <div class="title">
+        <h2>Throwback to a year ago</h2>
+        <p>
+          Here are some places that I traveled from August 2021 to January 2022
+          <br />
+          Check out some pictures I took!
+        </p>
+      </div>
+      <div class="about-center section-center">
+        <article class="about-img">
+          <img src="./images/ormond beach.jpg" alt="about picture" />
+        </article>
+        <article class="about">
+          <!-- btn container -->
+          <div class="btn-container">
+            <button class="tab-btn active" data-id="California">
+              California
+            </button>
+            <button class="tab-btn" data-id="Arizona">Arizona</button>
+            <button class="tab-btn" data-id="NYC">NYC</button>
+          </div>
+          <article class="about-content">
+            <!-- single item -->
+            <div class="content active" id="California">
+              <h4>California</h4>
+              <p>
+                I stayed mostly in Monterey Bay area but also visited San
+                Francisco, LA, Big Sur, etc.
+              </p>
+              <div class="about-img" style="margin-bottom: 1rem">
+                <img src="./images/aquarium.jpg" alt="" />
+              </div>
+              <div class="about-img" style="margin-bottom: 1rem">
+                <img src="./images/bridge.jpg" alt="" />
+              </div>
+              <div class="about-img" style="margin-bottom: 1rem">
+                <img src="./images/seals.jpg" alt="" />
+              </div>
+              <div class="about-img">
+                <img src="./images/SF.jpg" alt="" />
+              </div>
+            </div>
+            <!-- end of single item -->
+            <!-- single item -->
+            <div class="content" id="Arizona">
+              <h4>Arizona</h4>
+              <p>
+                I only visited Grand Canyon in Arizona, but for the unity of
+                style, I just named the tab Arizona.
+              </p>
+              <div class="about-img" style="margin-bottom: 1rem">
+                <img src="./images/Grand canyon sunrise.jpg" alt="" />
+              </div>
+              <div class="about-img">
+                <img src="./images/grand canyon.jpg" alt="" />
+              </div>
+            </div>
+            <!-- end of single item -->
+            <!-- single item -->
+            <div class="content" id="NYC">
+              <h4>NYC</h4>
+              <p>
+                NYC was my last stop before coming back to Korea. The city was
+                very lively and full of fun (but honestly I like west coast and
+                Florida better).
+              </p>
+              <div class="about-img" style="margin-bottom: 1rem">
+                <img src="./images/NY.jpg" alt="" />
+              </div>
+              <div class="about-img">
+                <img src="./images/NYC.jpg" alt="" />
+              </div>
+            </div>
+            <!-- end of single item -->
+          </article>
+        </article>
+      </div>
+    </section>
+    <!-- javascript -->
+    <script src="app.js"></script>
+  </body>
+</html>
