@@ -1,0 +1,49 @@
+/* index */
+
+@font-face {
+    font-family: 'Humanbumsuk';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Humanbumsuk.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    font-family: 'Humanbumsuk';
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+}
+
+.year-img {
+    height: 30vh;
+}
+
+.luck-img {
+    height: 15vh;
+}
+
+.lucks-img {
+    height: 14vh;
+}
+
+.question-text {
+    display: none;
+}
+
+.show-text .question-text {
+    display: block;
+}
+
+.minus-icon {
+    display: none;
+}
+
+.show-text .minus-icon {
+    display: inline;
+}
+
+.show-text .plus-icon {
+    display: none;
+}
