@@ -1,0 +1,95 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#menus {
+  width: 50rem;
+  margin: 3rem auto;
+}
+
+h1 {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+h1::after {
+  content: '';
+  display: block;
+  margin: 0.5rem auto;
+  width: 10rem;
+  height: 5px;
+  background-color: rgb(248, 185, 21);
+}
+
+/* 카테고리 탭 (필터 버튼) */
+#filter-btn-list {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 3rem;
+  list-style: none;
+}
+
+#filter-btn-list .filter-btn {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid rgb(248, 185, 21);
+  border-radius: 0.5rem;
+  background-color: white;
+  cursor: pointer;
+}
+
+#filter-btn-list .filter-btn.active {
+  background-color: rgb(248, 185, 21);
+  color: white;
+  font-weight: 700;
+}
+
+#filter-btn-list .filter-btn img {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+/* 메뉴 */
+#menu-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 2rem;
+  column-gap: 1rem;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.menu-image {
+  width: 10rem;
+}
+
+.menu-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid rgb(248, 185, 21);
+}
+
+.menu-title h5 {
+  font-size: 1rem;
+}
+
+.menu-title .price {
+  font-weight: 700;
+  color: rgb(248, 185, 21);
+}
+
+.menu-text {
+  padding-top: 0.5rem;
+  font-size: 0.8rem;
+  color: rgba(27, 27, 27, 0.76);
+}

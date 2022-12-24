@@ -1,0 +1,22 @@
+categories = [
+  {
+    "name": "전체메뉴",
+    "image": "http://www.kyochon.com/images/menu/bg_all.png"
+  },
+  {
+    "name": "블랙시리즈",
+    "image": "http://www.kyochon.com/images/menu/bg_chi10.png"
+  },
+  {
+    "name": "교촌시리즈",
+    "image": "http://www.kyochon.com/images/menu/bg_chi01.png"
+  },
+  {
+    "name": "허니시리즈",
+    "image": "http://www.kyochon.com/images/menu/bg_chi03.png"
+  },
+  {
+    "name": "레드시리즈",
+    "image": "http://www.kyochon.com/images/menu/bg_chi02.png"
+  },
+]
