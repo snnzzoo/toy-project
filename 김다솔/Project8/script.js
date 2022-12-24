@@ -57,36 +57,50 @@ const drinks = [
   },
 ];
 // 먼저 페이지 로딩 될 때 아이템 나열
-// 음료 나열할 섹션, 버튼 나열할 섹션 지정
+// 음료 나열할 섹션 지정
 const drinksSection = document.querySelector(".drinks");
-const filterSection = document.querySelector(".filter-container");
+// 필터 영역
+const filterSection = document.querySelectorAll(".filter-btn");
 
 // 문서 로딩될 때 다음 동작 실행 
 window.addEventListener("DOMContentLoaded", function () {
   displayDrinks(drinks);
-  displayFilters();
 });
-
 // 위에서 실행할 동작 정의 
 function displayDrinks(drinkItems){
   // 맨 위 리스트랑 맵핑시켜서 return 안 html 나열
   let displayDrink = drinkItems.map(function (drink) {
     return `<div class="drink">
     <img src=${drink.img} alt="drink img">
+    <div class="drink-detail">
     <h4 class="title">${drink.title}</h4>
     <h6 class="eng_title">${drink.eng_title}</h6>
     <p class="desc">${drink.desc}</p>
+    </div>
     </div>`;
   });
   displayDrink = displayDrink.join("");
   drinksSection.innerHTML = displayDrink;
 }
 
-// //필터 추가
-// function displayFilters() {
-//   const categories = drinks.reduce(
-//     function (values, item) {
-//       if (!values)
-//     }
-//   )
-// }
+// 필터 
+filterSection.forEach(function(btn){
+  btn.addEventListener('click', function(e){
+    //dataset을 쓰기 위해 html button에 'data-'추가
+    // console.log(e.currentTarget.dataset.id);
+    const category = e.currentTarget.dataset.id;
+    const drinkCategory = drinks.filter(function(drinkItem) {
+      // console.log(drinkItem.category); 여기서 조건을 안 걸면 모든 카테고리 다 나옴
+      if(drinkItem.category === category) {
+        return drinkItem 
+      }
+    });
+    // console.log(drinkCategory);
+    if(category === 'all'){
+      displayDrinks(drinks)
+    }
+    else{
+      displayDrinks(drinkCategory)
+    }
+  });
+});
