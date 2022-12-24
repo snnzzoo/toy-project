@@ -1,0 +1,60 @@
+button {
+  background: inherit ; 
+  border:none; 
+  box-shadow:none; 
+  border-radius:0; 
+  padding:0; 
+  overflow:visible; 
+  cursor:pointer
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url('./nj_ditto_41.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slide-container {
+  overflow: hidden;
+  margin: 0 auto;
+  width: 800px;
+  height: 530px;
+  position: relative;
+  z-index: 5;
+}
+.slide-container .slide {
+  text-align: center;
+  position: absolute;
+  display: grid;
+  place-items: center;
+  transition: all 2s ease;
+  z-index: 10;
+}
+
+.slide-container .slide img {
+  width: 800px;
+  height: 530px;
+  object-fit: cover;
+}
+
+.slide-btn span {
+  font-size: 5rem;
+  color: rgb(252, 253, 255);
+}
+
+.slide-btn .prev-btn,
+.slide-btn .next-btn {
+  position: absolute;
+  top: 45vh;
+  z-index: 10;
+}
+.slide-btn .prev-btn {
+  left: 22rem;
+}
+
+.slide-btn .next-btn {
+  right: 20.5rem;
+}

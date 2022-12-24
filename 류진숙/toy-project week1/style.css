@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
+
+
+  body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url('./nj_ditto_41.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Allura', cursive;
+  }
+
+  .container {
+    max-width: 80vw;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20rem;
+    border: 6px solid rgba(255, 255, 255, 0.394);
+    position: relative;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .bg-video {
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+  }
+
+  .title {
+    position: absolute;
+    font-size: 210px;
+    letter-spacing: -20px;
+    color: rgba(185, 192, 203, 0.918);
+    top: -3rem;
+    left: 28vw;
+    z-index: 5;
+    font-weight: lighter;
+  }
+
+  #countdown-area {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    position: absolute;
+    top: 60vh;
+    left: 0;
+  }
+
+  #countdown-area .box {
+    font-family: sans-serif;
+    width: 10rem;
+    border-radius: 10px;
+    background-color: rgba(141, 176, 247, 0.815);
+    padding: 1rem;
+    margin: 0 0.5rem;
+    font-size: 5rem;
+    color: white;
+    text-align: center;
+    font-weight: 800;
+  }
+
+  #countdown-area .box h5 {
+    margin: 0.8rem;
+    font-size: 1rem;
+    letter-spacing: 10px;
+    font-weight: 300;
+  }
+
+
+  @media all and (max-width: 575px) {
+    video {
+      display: none;
+    }
+
+    .title {
+      font-size: 9rem;
+      letter-spacing: -15px;
+      top: 8rem;
+      left: 40px;
+      color:rgba(231, 239, 254, 0.815)
+    }
+
+    #countdown-area {
+      width: 80%;
+      text-align: center;
+      left: 3.2rem;
+    }
+
+    #countdown-area .box {
+      width: 6rem;
+      font-size: 3rem;
+      background-color: rgba(135, 143, 160, 0.815)
+    }
+
+    #countdown-area .box h5 {
+      margin: 0;
+      font-size: 0.5rem;
+      letter-spacing: 5px;
+    }
+  }
