@@ -1,0 +1,53 @@
+h1 {
+  margin: 0;
+}
+
+.bg {
+  width: 100%;
+  height: 100vh;
+  background-color: #080e23;
+}
+
+.title {
+  padding: 5rem 0 0 0;
+  text-align: center;
+  font-size: 2.5rem;
+  color: white;
+}
+
+.ment {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: #ffd316;
+}
+
+/* 가위바위보 버튼 */
+.btns {
+  display: flex;
+  justify-content: center;
+  margin: 6rem;
+}
+
+.rock,
+.scissors,
+.paper {
+  cursor: pointer;
+  font-size: 6rem;
+  margin: 0 4rem;
+  background-color: transparent;
+  border: 2px solid #ffd316;
+}
+
+.rock:hover,
+.scissors:hover,
+.paper:hover {
+  transform: scale(1.1);
+  transition: all 200ms ease-in-out;
+}
+
+/* 점수 */
+.score__container {
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+}
