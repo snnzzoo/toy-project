@@ -6,4 +6,4 @@
 
 카운트 다운과 목표한 기간이 지날 시에 자동으로 타이머로 바뀌게 구현하였습니다
 
-![](https://raw.githubusercontent.com/runedemonic/TIL/image/img/main.gif)
+![](https://github.com/runedemonic/TIL/blob/master/img/main.gif?raw=true)
