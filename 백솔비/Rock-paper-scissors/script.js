@@ -22,20 +22,20 @@ function lose() {
 
 function game(user, computer) {
   if (user === computer) {
-    console.log('무승부');
+    message.innerHTML = '무승부~ 😐';
   } else {
     switch (user + computer) {
       case '✌🏻✋🏻':
       case '✊🏻✌🏻':
       case '✋🏻✊🏻':
         win();
-        console.log('사용자 승리');
+        message.innerHTML = '이겼어요! 😁';
         break;
       case '✌🏻✊🏻':
       case '✊🏻✋🏻':
       case '✋🏻✌🏻':
         lose();
-        console.log('컴퓨터 승리');
+        message.innerHTML = '졌어요... 🥲';
         break;
     }
   }
