@@ -1,0 +1,54 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.grid {
+  width: 400px;
+  height: 600px;
+  background-color: rgb(206, 238, 250);
+  position: relative;
+  font-size: 80px;
+  text-align: center;
+}
+
+.doodler {
+  width: 60px;
+  height: 85px;
+  background-image: url('./character.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 10;
+}
+
+.platform {
+  width: 85px;
+  height: 15px;
+  background-image: url('./grass.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+}
+
+.replay {
+  position: absolute;
+  left: 200px;
+  top: 400px;
+  width: 120px;
+  height: 60px;
+  transform: translate(-50%, -50%);
+  background-color: rgb(241, 83, 83);
+  font-size: 1.5rem;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+}
+
+.replay:hover {
+  cursor: pointer;
+  background-color: rgb(226, 47, 47);
+}
