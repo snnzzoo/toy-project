@@ -9,26 +9,30 @@
   </head>
   <body>
     <h1>뱀 게임 🐍</h1>
-    <h3>맵 크기 선택</h3>
+    <div class="devider-left">
+      <h3>맵 크기 선택</h3>
 
-    <input type="radio" name="map-size" value="300" class="checked" />소형
-    <input type="radio" name="map-size" value="600" />중형
-    <input type="radio" name="map-size" value="1200" />대형 <br /><br />
-    <button class="map" type="submit">맵 생성</button><br /><br /><br />
+      <input type="radio" name="map-size" value="300" class="checked" />소형
+      <input type="radio" name="map-size" value="600" />중형
+      <input type="radio" name="map-size" value="1200" />대형 <br /><br />
+      <button class="map" type="submit">맵 생성</button><br /><br /><br />
 
-    <h3>난이도 선택</h3>
+      <h3>난이도 선택</h3>
 
-    <input type="radio" name="level" value="50" class="checked" />초고수
-    <input type="radio" name="level" value="100" />고수
-    <input type="radio" name="level" value="500" />중수
-    <input type="radio" name="level" value="1000" />초보<br /><br />
+      <input type="radio" name="level" value="50" class="checked" />초고수
+      <input type="radio" name="level" value="100" />고수
+      <input type="radio" name="level" value="500" />중수
+      <input type="radio" name="level" value="1000" />초보<br /><br />
 
-    <button class="start" type="submit">Start/Restart</button><br /><br /><br />
+      <button class="start" type="submit">Start/Restart</button
+      ><br /><br /><br />
 
-    <h2 class="score">Score:<span>0</span></h2>
-
-    <div class="grid" id="grid">
-      <!-- 10 x 10 grid = 100 divs -->
+      <h2 class="score">Score:<span>0</span></h2>
+    </div>
+    <div class="devider-right">
+      <div class="grid" id="grid">
+        <!-- 10 x 10 grid = 100 divs -->
+      </div>
     </div>
 
     <script defer src="./main.js" charset="utf-8"></script>

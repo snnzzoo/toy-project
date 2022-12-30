@@ -18,3 +18,13 @@
 .apple {
   background-color: red;
 }
+
+.devider-left {
+  display: inline-block;
+}
+.devider-right {
+  margin-left: 20px;
+  display: inline-block;
+  position: absolute;
+  top: 20px;
+}
