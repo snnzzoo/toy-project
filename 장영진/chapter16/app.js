@@ -3,8 +3,10 @@ const oddsDisplay = document.querySelector('.odds') // 승률 디스플레이
 const result = ['LOSE', 'DRAW', 'WIN'] // 결과를 array로 표현, 인덱스 이용
 const resultDisplay = document.querySelector('.goodGame'); // 추가 기능 코드
 
-let numberOfMatches = 0;
-let numberOfWins = 0;
+let cnt = 0; // 경기 수
+let numberOfMatches = 0; // 승률 책정에 필요한 경기 수
+let numberOfWins = 0; // 승리 수
+let numberOfDraws = 0;
 let odds = 0; // 승률
 
 
@@ -20,8 +22,11 @@ for (let i = 0; i < btns.length; i++) {
       document.querySelector('.content').style.color = 'black';
 
       numberOfMatches += 1;
+      cnt += 1;
       odds = Math.round(numberOfWins / numberOfMatches * 100);
 
+      document.querySelector('.matches').innerHTML = cnt;
+      document.querySelector('.loses').innerHTML = numberOfMatches - numberOfWins;
       createLog(answer, odds)
 
     } else if (answer === 1) {
@@ -30,6 +35,11 @@ for (let i = 0; i < btns.length; i++) {
       document.querySelector('.content').style.color = 'black';
 
       // numberOfMatches++; 무승부는 승률 책정되지 않는다
+      cnt += 1;
+      numberOfDraws += 1;
+
+      document.querySelector('.matches').innerHTML = cnt;
+      document.querySelector('.draw').innerHTML = numberOfDraws;
       createLog(answer)
 
     } else {
@@ -37,9 +47,13 @@ for (let i = 0; i < btns.length; i++) {
       document.querySelector('.container').style.backgroundColor = 'blue';
       document.querySelector('.content').style.color = 'white';
 
+      cnt += 1;
       numberOfMatches += 1;
       numberOfWins += 1;
       odds = Math.round(numberOfWins / numberOfMatches * 100);
+
+      document.querySelector('.matches').innerHTML = cnt;
+      document.querySelector('.wins').innerHTML = numberOfWins;
       createLog(answer, odds)
     }
   })
