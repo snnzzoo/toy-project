@@ -19,7 +19,7 @@ for (let i = 0; i < btns.length; i++) {
     if (answer === 0) {
       document.querySelector('.game-result').innerHTML = result[0] // 패배 결과
       document.querySelector('.container').style.backgroundColor = 'red';
-      document.querySelector('.content').style.color = 'black';
+      document.querySelector('.container').style.color = 'black';
 
       numberOfMatches += 1;
       cnt += 1;
@@ -32,7 +32,7 @@ for (let i = 0; i < btns.length; i++) {
     } else if (answer === 1) {
       document.querySelector('.game-result').innerHTML = result[1] // 무승부 결과
       document.querySelector('.container').style.backgroundColor = 'yellow';
-      document.querySelector('.content').style.color = 'black';
+      document.querySelector('.container').style.color = 'black';
 
       // numberOfMatches++; 무승부는 승률 책정되지 않는다
       cnt += 1;
@@ -45,7 +45,7 @@ for (let i = 0; i < btns.length; i++) {
     } else {
       document.querySelector('.game-result').innerHTML = result[2] // 승리 결과
       document.querySelector('.container').style.backgroundColor = 'blue';
-      document.querySelector('.content').style.color = 'white';
+      document.querySelector('.container').style.color = 'white';
 
       cnt += 1;
       numberOfMatches += 1;
@@ -65,13 +65,16 @@ function createLog(answer, odds) {
 
   if (answer === 0) {
     log.innerHTML = 'LOSE';
+    log.style.color = 'red';
     resultDisplay.appendChild(log);
     oddsDisplay.innerHTML = odds;
   } else if (answer === 1) {
     log.innerHTML = 'DRAW';
+    log.style.color = 'black';
     resultDisplay.appendChild(log);
   } else {
     log.innerHTML = 'WIN';
+    log.style.color = 'blue'
     resultDisplay.appendChild(log);
     oddsDisplay.innerHTML = odds;
   }
