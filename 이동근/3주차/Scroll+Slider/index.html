@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PePe's World</title>
+  <!-- font-awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <!-- styles -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <header id="home">
+    <!-- navbar -->
+    <nav id="nav">
+      <div class="nav-center">
+        <!-- nav header -->
+        <div class="nav-header">
+          <img src="./logo.svg" class="logo" alt="logo" />
+          <button class="nav-toggle">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+        <!-- links -->
+        <div class="links-container">
+          <ul class="links">
+            <li>
+              <a href="#home" class="scroll-link">home</a>
+            </li>
+            <li>
+              <a href="#slide" class="scroll-link">slide</a>
+            </li>
+            <li>
+              <a href="#favorite" class="scroll-link">favorite</a>
+            </li>
+            <!-- <li>
+              <a href="#tours" class="scroll-link">tours</a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- banner -->
+    <div class="banner">
+      <div class="container">
+        <h1>Welcome to PePe's World!</h1>
+        <p>
+          Pepe the Frog became a 'hate symbol'.<br>
+          But I love pepe it is.<br>
+          Would you join this love?
+        </p>
+        <a href="#favorite" class="scroll-link btn btn-white">explore pepe</a>
+      </div>
+    </div>
+  </header>
+  <!-- slide -->
+  <section id="slide" class="section">
+    <div class="title">
+      <h2>pepe <span>slide</span></h2>
+      <!-- slider -->
+      <div class="slider-container">
+        <div class="slide">
+          <div>
+            <img src="./pepe1.jpg" class="pepe-img" alt="" />
+            <h4>따봉 페페</h4>
+            <h1>1</h1>
+          </div>
+        </div>
+        <div class="slide">
+          <div>
+            <img src="./pepe2.jpeg" class="pepe-img" alt="" />
+            <h4>즐거운 페페</h4>
+            <h1>2</h1>
+          </div>
+        </div>
+        <div class="slide">
+          <div>
+            <img src="./pepe3.jpg" class="pepe-img" alt="" />
+            <h4>고민하는 페페</h4>
+            <h1>3</h1>
+          </div>
+        </div>
+        <div class="slide">
+          <div>
+            <img src="./pepe4.png" class="pepe-img" alt="" />
+            <h4>슬픈 페페</h4>
+            <h1>4</h1>
+          </div>
+        </div>
+      </div>
+      <div class="btn-container">
+        <button type="button" class="prevBtn">
+          prev
+        </button>
+        <button type="button" class="nextBtn">
+          next
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- favorite -->
+  <section id="favorite" class="section">
+    <div class="title">
+      <h2>my <span>favorite</span></h2>
+      <div class="favorite-container">
+        <div class="favorite">
+          <img src="./pepe1.jpg" class="pepe-img" alt="" />
+          <h4>This is my favorite pepe !</h4>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- footer -->
+  <footer class="section">
+    <p>
+      copyright &copy; backroads travel tours company
+      <span id="date"></span>. all rights reserved
+    </p>
+  </footer>
+  <a class="scroll-link top-link" href="#home">
+    <i class="fas fa-arrow-up"></i>
+  </a>
+  <!-- javascript -->
+  <script src="app.js"></script>
+</body>
+
+</html>
