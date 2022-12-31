@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+     <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/9dfbf66130.js" crossorigin="anonymous"></script>
+    <title>Rock Scissors Paper</title>
+</head>
+<body>
+    <header>
+        <h1>가위바위보 게임</h1>
+    </header>
+    <div class="score-board">
+        <div id="user-label" class="badge">사용자</div>
+        <div id="computer-label" class="badge">컴퓨터</div>
+        <span id="user-score">0</span>:<span id="computer-score">0</span>        
+    </div>
+    <div class="result">
+        <p></p>
+    </div>
+    <div class="choices">
+        <div class="choice" id="s">
+            <img src="https://feelstory.com/gnu/nori/img/1_on.png" alt="가위">
+        </div>
+        <div class="choice" id="p">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSjPE6KrheO1nQ_9oGo09YZR4Zir8unVx96iKETqhDxwPmCfSg5ypYcbwg_TmkztDCqONg&usqp=CAU" alt="보자기">
+        </div>
+        <div class="choice" id="r">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrhBKbtiJuOFPu4sVjkTGX1ecuwt6L3Q6IQg&usqp=CAU" alt="바위">
+        </div>
+    </div>
+
+    <p id="action-message">Make your move</p>
+    <!-- JS -->
+    <script src="rsp.js"></script>
+</body>
+
+</html>
