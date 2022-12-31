@@ -1,0 +1,36 @@
+.container {
+    width: 500px;
+    height: 600px;
+    background-image: url(./경기장.png);
+    object-fit: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    font-size: 200px;
+    text-align: center;
+}
+
+.doodler {
+    width: 60px;
+    height: 85px;
+    background-image: url(./럭비공.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+    position: absolute;
+}
+
+.platform {
+    width: 85px;
+    height: 15px;
+    background-color: black;
+    position: absolute;
+}
+
+.replay {
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    font-size: 3rem;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
