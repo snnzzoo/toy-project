@@ -1,16 +1,15 @@
+// 맵 생성 전 변수 선언
 let width = 0;
 let map_size = 0;
 const mapBtn = document.querySelector(".map");
 
+// 맵 생성 함수
 function makeMap() {
   width = 0;
-  map_size = document.querySelector('input[name="map-size"]:checked').value;
-  console.log(map_size);
-  document.getElementById("grid").style.width = `${map_size}px`;
-  document.getElementById("grid").style.height = `${map_size}px`;
+  map_size = document.querySelector('input[name="map-size"]:checked').value; // 라디오 버튼 체크 된 항목의 value값 가져옴
+  document.getElementById("grid").style.width = `${map_size}px`;  // css에 width를 mapsize로 계산한 값 입력
+  document.getElementById("grid").style.height = `${map_size}px`; // css에 height를 mapsize로 계산한 값 입력
   width = map_size / 30;
-  console.log("width", width);
-  console.log("width**2", width ** 2);
   // 블럭(div) 개수 맵 사이즈에 맞게 자동 생성
   for (let i = 0; i < width ** 2; i++) {
     let block = document.createElement("div");
@@ -37,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // start, restart game
   function startGame() {
     squares = document.querySelectorAll(".grid div");
-    console.log("currentSnake :", currentSnake);
     currentSnake.forEach((index) => squares[index].classList.remove("snake"));
     squares[appleIndex].classList.remove("apple");
     clearInterval(interval);
@@ -45,7 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
     randomApple();
     direction = 1;
     scoreDisplay.innerText = score;
-    intervalTime = document.querySelector('input[name="level"]:checked').value;
+    intervalTime = document.querySelector('input[name="level"]:checked').value; // 레벨 선택 라디오 버튼 value값 사용
     currentSnake = [2, 1, 0];
     currentIndex = 0;
     currentSnake.forEach((index) => squares[index].classList.add("snake"));
