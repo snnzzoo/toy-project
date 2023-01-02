@@ -1,0 +1,46 @@
+.bg {
+  width: 100%;
+  height: 100vh;
+  background-color: #203e96;
+}
+
+.container {
+  position: relative;
+  top: 50%;
+  width: 400px;
+  margin: 0 auto;
+  transform: translateY(-50%);
+}
+
+.title {
+  margin: 0;
+  text-align: center;
+  font-size: 3rem;
+  color: white;
+}
+
+.count__container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.days,
+.hours,
+.mins,
+.secs {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  height: 100px;
+  margin: 0 1rem;
+  padding: 0.7rem;
+  text-align: center;
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: white;
+}
+
+.subTitle {
+  font-size: 1rem;
+}

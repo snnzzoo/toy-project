@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll</title>
+    <!-- 폰트 -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- css 파일 연결 -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+
+    <header id="home">
+
+      <!-- navbar -->
+      <nav id="nav">
+        <div class="nav-center">
+          <div class="nav-header">
+            <img
+              src="https://data1.pokemonkorea.co.kr/newdata/pokedex/mid/000401.png"
+              class="logo"
+              alt="logo"
+            />
+            <button class="nav-toggle">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+          <div class="links-container">
+            <ul class="links">
+              <li>
+                <a href="#home" class="scroll-link">home</a>
+              </li>
+              <li>
+                <a href="#about" class="scroll-link">의식적 연습</a>
+              </li>
+              <li>
+                <a href="#services" class="scroll-link">장인 정신</a>
+              </li>
+              <li>
+                <a href="#tours" class="scroll-link">클린 코드</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- banner -->
+      <div class="banner">
+        <div class="container">
+          <h1>개발자 추천 도서</h1>
+          <p>
+            훌륭한 개발자가 되고 싶으신가요? 그렇다면 다음 책을 모두 읽어보아요!
+          </p>
+        </div>
+      </div>
+    </header>
+
+
+    <!-- about -->
+    <section id="about" class="section">
+      <div class="title">
+        <h2>1만 시간의 <span>재발견</span></h2>
+        <section class="section">
+          <div class="about-center section-center">
+            <article class="about-img">
+              <img
+                src="https://image.yes24.com/goods/29135134/XL"
+                alt="book cover"
+              />
+            </article>
+            <article class="about">
+              <!-- btn container -->
+              <div class="btn-container">
+                <button class="tab-btn tab-btn-all active" data-id="inform">
+                  책 소개
+                </button>
+                <button class="tab-btn tab-btn-all" data-id="reason">
+                  추천 이유
+                </button>
+                <button class="tab-btn tab-btn-all" data-id="review">
+                  독자 리뷰
+                </button>
+              </div>
+              <div class="about-content">
+                <!-- single item -->
+                <div class="content active" id="inform">
+                  <h4>책 소개</h4>
+                  <p>
+                    결론을 말하자면 ‘1만 시간의 법칙’은 철저히 과학적으로 증명된
+                    진리다. 하지만 말콤 글래드웰에 의해 임의로 ‘편집’되어
+                    사람들이 무턱대고 신봉하고 있던 1만 시간의 법칙은 그
+                    ‘방법’면에서는 완전히 잘못 이해되고 있었다. 우리는 여태까지
+                    이 법칙에 대해 극히 일부만 알았고, 우리가 ‘듣고 싶었던’
+                    부분만 취사선택해 들어왔던 것이다! 《1만 시간의 재발견》은
+                    ‘1만 시간’ 연구의 창시자인 안데르스 에릭슨 박사의 국내 첫
+                    출간작으로, 우리가 그동안 잘못 알고 있던 ‘1만 시간의 법칙’에
+                    대한 오해를 바로잡고, 인간의 적응력과 성취에 대한 새로운
+                    사고방식을 제시한다.
+                  </p>
+                </div>
+                <!-- end of single item -->
+                <!-- single item -->
+                <div class="content" id="reason">
+                  <h4>추천 이유</h4>
+                  <p>의식적인 연습의 7가지 원칙</p>
+                  <ul>
+                    <li>첫째, 효과적인 훈련 기법이 수립되어 있는 기술 연마</li>
+                    <li>
+                      둘째, 개인의 컴포트 존을 벗어난 지점에서 진행, 자신의 현재
+                      능력을 살짝 넘어가는 작업을 지속적으로 시도
+                    </li>
+                    <li>셋째, 명확하고 구체적인 목표를 가지고 진행</li>
+                    <li>
+                      넷째, 신중하고 계획적이다. 즉, 개인이 온전히 집중하고
+                      '의식적'으로 행동할 것을 요구
+                    </li>
+                    <li>다섯째, 피드백과 피드백에 따른 행동 변경을 수반</li>
+                    <li>
+                      여섯째, 효과적인 심적 표상을 만들어내는 한편으로 심적
+                      표상에 의존
+                    </li>
+                    <li>
+                      일곱째, 기존에 습득한 기술의 특정 부분을 집중적으로
+                      개선함으로써 발전시키고, 수정하는 과정을 수반
+                    </li>
+                  </ul>
+                </div>
+                <!-- end of single item -->
+                <!-- single item -->
+                <div class="content" id="review">
+                  <h4>독자 리뷰</h4>
+                  <p>
+                    제3장 심적 표상 이해하기 : 의욕보다 중요한 연습의 방법
+                    새로운 기술을 개발하거나 기존의 기술을 날카롭게 다듬도록
+                    스스로를 채찍질하는 동안, 우리는 자신의 심적 표상을
+                    발전시키고 한층 날카롭게 다듬게 되며, 이것이 다시 수행늘력을
+                    향상시켜 이전에는 하지 못했던 것을 할 수 있게 만든다. 제4장
+                    황금 기준 : 최고의 훈련 방법을 찾아서 인간 잠재력의 지평은
+                    세대가 바뀔 때마다 확장되고 있다. 제7장 비범함으로 가는
+                    로드맵 : 그들은 어떻게 최고의 자리에 올랐는가 현재 상황에
+                    만족하지 않고, 그들은 앞으로 나아갈 방법, 다른 사람들이
+                    해보지 않는 무언가를 해낼 방범을 찾는다.
+                  </p>
+                </div>
+                <!-- end of single item -->
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+    <!-- services -->
+    <section id="services" class="section">
+      <div class="title">
+        <h2>소프트웨어 <span>장인</span></h2>
+        <section class="section">
+          <div class="about-center section-center">
+            <article class="about-img">
+              <img
+                src="http://image.yes24.com/momo/TopCate582/MidCate002/58112706.jpg"
+                alt="book cover"
+              />
+            </article>
+            <article class="about-2">
+              <!-- btn container -->
+              <div class="btn-container">
+                <button class="tab-btn-2 tab-btn-all active" data-id="inform-2">
+                  책 소개
+                </button>
+                <button class="tab-btn-2 tab-btn-all" data-id="reason-2">
+                  추천 이유
+                </button>
+                <button class="tab-btn-2 tab-btn-all" data-id="review-2">
+                  독자 리뷰
+                </button>
+              </div>
+              <div class="about-content">
+                <!-- single item -->
+                <div class="content-2 active" id="inform-2">
+                  <h4>책 소개</h4>
+                  <p>
+                    더 나은 개발자가 되어, 더 좋은 코드를 전달하고 싶은 당신을
+                    위하여... 이 책에서 풀어낸 소프트웨어 장인정신의
+                    프로페셔널리즘, 기술적 탁월함, 고객 만족은 애자일, 린(lean)
+                    원칙들과 시너지를 일으켜 소프트웨어 업계를 한 단계 도약시킬
+                    수 있다. 또한 프로젝트와 개발자를 공장 운영과 생산 라인
+                    노동자로 보는 관점을 바꾸는데 기여할 것이다. 그리고 책에서
+                    다룬 경험을 바탕으로 한 사례와 실용적인 조언은 소프트웨어
+                    개발자뿐만 아니라 프로젝트와 연관이 있는 모든 참여자에게
+                    도움이 될 것이다.
+                  </p>
+                </div>
+                <!-- end of single item -->
+                <!-- single item -->
+                <div class="content-2" id="reason-2">
+                  <h4>추천 이유</h4>
+                  <p>소프트웨어 장인정신 매니페스토</p>
+                  <ul>
+                    <li>
+                      동작하는 소프트웨어 뿐만 아니라, 정교하고 솜씨 있게
+                      만들어진 작품을,
+                    </li>
+                    <li>
+                      변화에 대응하는 것뿐만 아니라, 계속해서 가치를 더하는
+                      것을,
+                    </li>
+                    <li>
+                      개별적으로 협력하는 것뿐만 아니라, 프로페셔널 커뮤니티를
+                      조성하는 것을,
+                    </li>
+                    <li>
+                      고객과 협업하는 것뿐만 아니라, 생산적인 동반자 관계를,
+                    </li>
+                  </ul>
+                </div>
+                <!-- end of single item -->
+                <!-- single item -->
+                <div class="content-2" id="review-2">
+                  <h4>독자 리뷰</h4>
+                  <p>
+                    어떻게 하면 더 나은 프로그래머가 될 수 있을까? 하는 질문에
+                    답을 주는 책이다. 당연하게 생각하고 그냥 받아들였던 예전
+                    방법들이 뒤에 큰 문제를 일으킬 수 있음을 알고는 있지만,
+                    시간과 경제적인 면에서의 지원이 없이는 불가능하다고
+                    생각했다. 그러나, 이 책에서는 꼭 그런 지원이 필요한 곳이
+                    아닌 부분에서도 전반적인 가치를 상승시킬 수 있는 시각이나
+                    방법론을 제시하고 있다. 그 중 몇몇은 당장 적용 실행보아도
+                    될만한 것이 많다.
+                  </p>
+                </div>
+                <!-- end of single item -->
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+    <!-- contact -->
+    <section id="tours" class="section">
+      <div class="title">
+        <h2>좋은 코드, <span>나쁜 코드</span></h2>
+        <section class="section">
+          <div class="about-center section-center">
+            <article class="about-img">
+              <img
+                src="http://image.yes24.com/goods/109366833/XL"
+                alt="book cover"
+              />
+            </article>
+            <article class="about-3">
+              <!-- btn container -->
+              <div class="btn-container">
+                <button class="tab-btn-3 tab-btn-all active" data-id="inform-3">
+                  책 소개
+                </button>
+                <button class="tab-btn-3 tab-btn-all" data-id="reason-3">
+                  추천 이유
+                </button>
+                <button class="tab-btn-3 tab-btn-all" data-id="review-3">
+                  독자 리뷰
+                </button>
+              </div>
+              <div class="about-content">
+                <!-- single item -->
+                <div class="content-3 active" id="inform-3">
+                  <h4>책 소개</h4>
+                  <p>
+                    구글 엔지니어가 말하는 좋은 코드 작성법 좋은 코드를 작성하기
+                    위한 이론과 실전을 소개한다. 단순히 해야 할 일과 하지 말아야
+                    할 일을 나열하기보다, 여섯 가지 원칙을 바탕으로 각 개념과
+                    기술의 장단점, 그리고 이면의 핵심 논리를 설명한다. 책에서
+                    설명하는 즉시 사용 가능한 수십 가지의 기술을 익힌다면,
+                    숙련된 프로그래머의 사고법과 코드 작성의 노하우를 이해할 수
+                    있다. 효과적인 테스트 방법도 설명하므로 더 나은 코드를
+                    작성하는 데 도움을 줄 것이다.
+                  </p>
+                </div>
+                <!-- end of single item -->
+                <!-- single item -->
+                <div class="content-3" id="reason-3">
+                  <h4>추천 이유</h4>
+                  <p>좋은 코드, 나쁜 코드</p>
+                  <p>
+                    나쁜 코드에 대해 이유를 설명하고, 좋은 코드로 바꿔가는
+                    과정을 볼 수 있다. 다양하고 구체적인 코드 예시를 통해
+                    이론으로 배운 코드 작성 방법을 실제로 어떻게 적용하는지 알
+                    수 있다. 책을 읽으며 좋은 코드에 대한 본인의 기준을 세우고,
+                    기존에 작성한 코드에 적용하면서 학습하는 것을 추천한다.
+                  </p>
+                </div>
+                <!-- end of single item -->
+                <!-- single item -->
+                <div class="content-3" id="review-3">
+                  <h4>독자 리뷰</h4>
+                  <p>
+                    한 줄 요약 : 이론을 실습을 통해 적용해보며 좋은 코드 작성
+                    방법을 안내하는 가이드북 프로그램을 구현하다보면 버그는
+                    반드시 나타나고, 개발자들간에 트러블도 발생한다. 이런
+                    문제들은 프로그램을 작성하는 컴퓨터의 문제보다는 코드로
+                    구현하는 과정때문에 나타난다. 많은 기능을 포함한 프로그램도
+                    결국 개발자 한 명 한 명이 협업하여 작성한 것이기 때문이다.
+                    이런 문제를 줄이기 위해 '코드 컨벤션' 같은 작성 규칙을
+                    정하고 '리팩터링'이라는 개선작업을 진행한다. 그렇다면 좋은
+                    코드를 작성하기 위한 규칙은 무엇인지, 어떻게
+                    개선해야하는지는 누가 정하는 것일까?
+                  </p>
+                </div>
+                <!-- end of single item -->
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </section>
+    <!-- footer -->
+    <footer class="section">
+      <p>
+        copyright &copy; backroads travel tours company
+        <span id="date"></span>. all rights reserved
+      </p>
+    </footer>
+    <a class="scroll-link top-link" href="#home">
+      <i class="fas fa-arrow-up"></i>
+    </a>
+    <!-- javascript -->
+    <script defer src="./main.js"></script>
+  </body>
+</html>

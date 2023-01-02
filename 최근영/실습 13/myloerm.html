@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MZ세대 용어</title>
+    <link rel="stylesheet" type="text/css" href="./myloerm.css">
+</head>
+<body>
+    <h1>MZ세대 용어 뽑아보기</h1>
+    <div class="select__box">
+        <p>뽑아볼 갯수</p>
+        <!-- input 값으로 숫자만 받아올 수 있게 제한 두는 부분 oninput -->
+        <input type="text" id="cnt" oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');">
+        <button id="checkbtn">뽑기</button>
+    </div>
+    <div class="text__box" id="text__box"></div>
+    <script src="./myloerm.js"></script>
+</body>
+</html>

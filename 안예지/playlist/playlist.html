@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Playlist</title>
+    <!-- 구글 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200&family=Quantico:ital@1&display=swap"
+        rel="stylesheet">
+    <!-- 구글 아이콘 -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- style.css -->
+    <link rel="stylesheet" href="./playlist.css">
+</head>
+
+<body>
+    <section class="section-center">
+        <h3>My Playlist</h3>
+        <!-- form -->
+        <form class="playlist-form">
+            <!-- 알림 영역 -->
+            <p class="alert"></p>
+            <div class="form-control">
+                <input type="text" id="playlist" placeholder="e.g. 이루리 - 우주소녀">
+                <button type="submit" class="submit-btn">추가</button>
+            </div>
+        </form>
+        <!-- list -->
+        <div class="playlist-container">
+            <div class="playlist-list">
+            </div>
+            <!-- all clear items button -->
+            <button type="button" class="clear-btn">목록 초기화</button>
+        </div>
+        <!-- slider -->
+        <div class="slider-container">
+            <h3>#새해 첫 곡, 뭐 듣지?</h3>
+            <div class="slide">
+                <div>
+                    <img src="./album_jacket/redvelvet.jpg" class="slide-img" alt="">
+                    <div class="album-info">
+                        <h4>Birthday</h4>
+                        <p>Red Velvet (레드벨벳)</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="./album_jacket/class.jpg" class="slide-img" alt="">
+                    <div class="album-info">
+                        <h4>시작</h4>
+                        <p>가호(Gaho)</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="./album_jacket/nctdream.jpg" class="slide-img" alt="">
+                    <div class="album-info">
+                        <h4>Hello Future</h4>
+                        <p>NCT DREAM</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="./album_jacket/wjsn.jpg" class="slide-img" alt="">
+                    <div class="album-info">
+                        <h4>이루리</h4>
+                        <p>우주소녀</p>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <div>
+                    <img src="./album_jacket/lotto.jpg" class="slide-img" alt="">
+                    <div class="album-info">
+                        <h4>Lotto</h4>
+                        <p>EXO</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="./album_jacket/lalisa.jpg" class="slide-img" alt="">
+                    <div class="album-info">
+                        <h4>MONEY</h4>
+                        <p>리사(LISA)</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="./album_jacket/flower.jpg" class="slide-img" alt="">
+                    <div class="album-info">
+                        <h4>꽃길 (Prod. By ZICO)</h4>
+                        <p>김세정</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="./album_jacket/happy.jpg" class="slide-img" alt="">
+                    <div class="album-info">
+                        <h4>Happy</h4>
+                        <p>태연 (TAEYEON)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-container">
+            <button type="button" class="prevBtn">
+                Prev
+            </button>
+            <button type="button" class="nextBtn">
+                Next
+            </button>
+        </div>
+    </section>
+
+
+    <!-- wave background -->
+    <div class="line line-1">
+        <div class="wave wave1" style="background-image: url('./border-img/1.png')"></div>
+    </div>
+
+    <div class="line line-2">
+        <div class="wave wave2" style="background-image: url('./border-img/2.png')"></div>
+    </div>
+
+    <div class="line line-3">
+        <div class="wave wave3" style="background-image: url('./border-img/3.png')"></div>
+    </div>
+
+    <!-- js -->
+    <script src="./playlist.js"></script>
+    <script src="./slider.js"></script>
+
+</body>
+
+</html>

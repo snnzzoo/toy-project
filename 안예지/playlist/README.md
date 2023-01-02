@@ -1,0 +1,1 @@
+![My_playlist](D:\djngo_practice\toy-project\안예지\playlist\assets\My_playlist.gif)

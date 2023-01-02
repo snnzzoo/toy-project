@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+     <!-- 폰트어썸 -->
+    <script src="https://kit.fontawesome.com/9dfbf66130.js" crossorigin="anonymous"></script>
+    <title>Video</title>
+</head>
+<body>
+    <header>
+        <!-- 로딩 이미지 -->
+        <div class="preloader">
+            <img src="https://mblogthumb-phinf.pstatic.net/MjAxODEwMjNfNjAg/MDAxNTQwMjg2OTk2NTcw.mfWKPtzKVO1mJaBBIFKIkVBlMQQIF1Vc-yrlbbGaoP0g.KNJWAgMmhsfQrZI3n0UT-LMi_qpHAZls4qPMvbNaJBcg.GIF.chingguhl/Spinner-1s-200px.gif?type=w800" alt="preloader">
+        </div>
+        <video class="video-container" controls muted autoplay loop>
+            <source src="./la.mp4" type="video/mp4">
+        </video>
+        <!-- 비디오 버튼 -->
+        <button class="switch-btn">
+            <span>play</span>
+            <span>pause</span>
+            <span class="switch"></span>
+        </button>
+    </header>
+    <!-- JS -->
+    <script src="video.js"></script>
+</body>
+</html>
