@@ -1,0 +1,78 @@
+* {
+  font-family: 'DotGothic16', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.grid {
+  width: 400px;
+  height: 600px;
+  background-color: rgb(41, 41, 41);
+  position: relative;
+  font-size: 80px;
+  text-align: center;
+}
+
+.doodler {
+  width: 60px;
+  height: 85px;
+  background-image: url('./character.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  z-index: 10;
+}
+
+.platform {
+  width: 85px;
+  height: 15px;
+  background-image: url('./grass.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+}
+
+.title {
+  margin-top: 5rem;
+  font-size: 2rem;
+  color: white;
+}
+
+.main-image {
+  width: 150px;
+  height: 150px;
+}
+
+.play {
+  position: absolute;
+  left: 200px;
+  top: 400px;
+  width: 120px;
+  height: 60px;
+  transform: translate(-50%, -50%);
+  background-color: rgb(241, 83, 83);
+  font-size: 1.5rem;
+  color: white;
+  border: 0;
+  border-radius: 10px;
+}
+
+.play:hover {
+  cursor: pointer;
+  background-color: rgb(226, 47, 47);
+}
+
+.inner-score {
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 1.5rem;
+  color: white;
+}
