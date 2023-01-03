@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1>뱀 게임 🐍</h1>
+    <div class="devider-left">
+      <h3>맵 크기 선택</h3>
+
+      <input type="radio" name="map-size" value="300" class="checked" />소형
+      <input type="radio" name="map-size" value="600" />중형
+      <input type="radio" name="map-size" value="1200" />대형 <br /><br />
+      <button class="map" type="submit">맵 생성</button><br /><br /><br />
+
+      <h3>난이도 선택</h3>
+
+      <input type="radio" name="level" value="50" class="checked" />초고수
+      <input type="radio" name="level" value="100" />고수
+      <input type="radio" name="level" value="500" />중수
+      <input type="radio" name="level" value="1000" />초보<br /><br />
+
+      <button class="start" type="submit">Start/Restart</button
+      ><br /><br /><br />
+
+      <h2 class="score">Score:<span>0</span></h2>
+      <ul style="margin-left: 0">
+        규칙
+        <li>벽이나 자기 자신과 부딪히면 죽는다</li>
+        <li>사과를 먹으면 길어진다</li>
+        <li>방향키로 진행 방향을 조절한다</li>
+      </ul>
+    </div>
+    <div class="devider-right">
+      <div class="grid" id="grid">
+        <!-- 10 x 10 grid = 100 divs -->
+      </div>
+    </div>
+
+    <script defer src="./main.js" charset="utf-8"></script>
+  </body>
+</html>
