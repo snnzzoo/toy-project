@@ -1,7 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
   const grid = document.querySelector('.grid');
   const doodler = document.createElement('div');
-  const replay = document.querySelector('.replay');
+  const play = document.querySelector('.play');
+  const scoreText = document.querySelector('#title');
+  const mainImage = document.querySelector('.main-image');
+  const innerScore = document.querySelector('#innerScore');
   let doodlerLeftSpace = 50;
   let startPoint = 150;
   let doodlerBottomSpace = startPoint;
@@ -18,8 +21,11 @@ document.addEventListener('DOMContentLoaded', () => {
   let score = 0;
 
   function createDoodler() {
+    // 두들러 캐릭터 추가
     grid.appendChild(doodler);
     doodler.classList.add('doodler');
+
+    // 첫 시작은 처음 발판에서 시작
     doodlerLeftSpace = platforms[0].left;
     doodler.style.left = doodlerLeftSpace + 'px';
     doodler.style.bottom = doodlerBottomSpace + 'px';
@@ -27,7 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   class Platform {
     constructor(newPlatBottom) {
+      // 새로운 발판의 위치
       this.bottom = newPlatBottom;
+      // 왼쪽 값을 기준으로 발판은 총 너비 400 - 발판 너비 85를 뺀 315 안에서의 랜덤한 값으로 지정
       this.left = Math.random() * 315;
       this.visual = document.createElement('div');
 
@@ -41,8 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function createPlatforms() {
     for (let i = 0; i < platformCount; i++) {
+      // 발판의 개수를 5개로 지정한 뒤 처음 시작
       let platGap = 600 / platformCount;
+      // 발판의 간격을 100으로 하여 새로운 발판의 위치를 지정
       let newPlatBottom = 100 + i * platGap;
+      // 새로운 발판의 위치를 가지고 새로운 발판 생성
       let newPlatform = new Platform(newPlatBottom);
       platforms.push(newPlatform);
       console.log(platforms);
@@ -50,15 +61,20 @@ document.addEventListener('DOMContentLoaded', () => {
   };
 
   function movePlatforms() {
+    // 두들러의 높이가 200보다 클 경우
     if (doodlerBottomSpace > 200) {
+      // 각각의 발판은 시간에 따라 4px 간격으로 내려가게 됨
       platforms.forEach(platform => {
         platform.bottom -= 4;
         let visual = platform.visual;
         visual.style.bottom = platform.bottom + 'px';
 
+        // 만약 발판의 높이가 10보다 작다면
         if (platform.bottom < 10) {
+          // 발판은 사라짐
           let firstPlatform = platforms[0].visual;
           firstPlatform.classList.remove('platform');
+          // 첫 번째 요소를 제거하는 shift()
           platforms.shift();
           console.log(platforms);
           score++;
@@ -67,12 +83,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       })
     }
+
+    innerScore.innerText = `SCORE : ${score}`;
   };
 
   function jump() {
+    // 떨어지는 반복을 중단
     clearInterval(downTimerId);
     isJumping = true;
 
+    // 위로 올라가는 반복(setInterval)
     upTimerId = setInterval(function () {
       doodlerBottomSpace += 20;
       doodler.style.bottom = doodlerBottomSpace + 'px';
@@ -98,6 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       platforms.forEach(platform => {
         if (
+          // 두들러가 발판에 닿았을 경우 && 점프를 하고 있는 중이 아닐 경우
           (doodlerBottomSpace >= platform.bottom) &&
           (doodlerBottomSpace <= platform.bottom + 15) &&
           ((doodlerLeftSpace + 60) >= platform.left) &&
@@ -105,12 +126,12 @@ document.addEventListener('DOMContentLoaded', () => {
           !isJumping
         ) {
           console.log('landed');
+          // 두들러의 초기 위치를 발판의 위치로 변경 후 다시 jump 함수 실행
           startPoint = doodlerBottomSpace;
           jump();
           isJumping = true;
         }
       })
-
     }, 20);
   };
 
@@ -118,25 +139,28 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('game over');
     isGameOver = true;
 
+    // grid의 모든 요소들을 제거
     while (grid.firstChild) {
       grid.removeChild(grid.firstChild);
     }
 
     // 점수 출력
-    grid.innerHTML = `점수 : ${score}`;
+    scoreText.innerText = `SCORE : ${score}`;
+    grid.appendChild(scoreText);
 
     // 리플레이 버튼 출력
-    replay.style.display = 'block';
-    grid.appendChild(replay);
+    play.style.display = 'block';
+    play.innerText = 'REPLAY';
+    grid.appendChild(play);
     
-
+    // clearInterval로 반복을 중단
     clearInterval(upTimerId);
     clearInterval(downTimerId);
     clearInterval(leftTimerId);
     clearInterval(rightTimerId);
 
     // 리플레이 버튼 추가
-    replay.addEventListener('click', () => {
+    play.addEventListener('click', () => {
       location.reload();
     });
   };
@@ -158,12 +182,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   };
 
+  // 왼쪽 방향키를 누를 경우 오른쪽으로 움직임을 멈춤
   function moveLeft() {
     if (isGoingRight) {
       clearInterval(rightTimerId);
       isGoingRight = false;
     }
     
+    // 왼쪽으로 이동하면서 벽을 만났을 때 오른쪽으로 이동
     isGoingLeft = true;
     leftTimerId = setInterval(function () {
       if (doodlerLeftSpace >= 0) {
@@ -173,12 +199,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 20);
   };
 
+  // 오른쪽 방향키를 누를 경우 오른쪽으로 움직임을 멈춤
   function moveRight() {
     if (isGoingLeft) {
       clearInterval(leftTimerId);
       isGoingLeft = false;
     }
 
+    // 오른쪽으로 이동하면서 벽을 만났을 때 왼쪽으로 이동
     isGoingRight = true;
     rightTimerId =setInterval(function () {
       if (doodlerLeftSpace <= 340) {
@@ -188,6 +216,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 20);
   };
 
+  // 위 방향키를 누를 경우 왼쪽, 오른쪽으로 이동을 멈춤
   function moveStraight() {
     isGoingLeft = false;
     isGoingRight = false;
@@ -203,12 +232,16 @@ document.addEventListener('DOMContentLoaded', () => {
       setInterval(movePlatforms, 30);
       jump(startPoint);
       document.addEventListener('keyup', control);
-      
-      // 리플레이 버튼은 초기에 none
-      replay.style.display = 'none';
     }
   };
-
-  // attach to button
-  start();
+  
+  play.innerText = 'START';
+  
+  play.addEventListener('click', () => {
+    mainImage.style.display = 'none';
+    scoreText.innerText = '';
+    // 게임 시작시 버튼은 다시 none
+    play.style.display = 'none';
+    start();
+  })
 })

@@ -1,3 +1,7 @@
+* {
+  font-family: 'DotGothic16', sans-serif;
+}
+
 body {
   height: 100vh;
   display: flex;
@@ -7,7 +11,7 @@ body {
 .grid {
   width: 400px;
   height: 600px;
-  background-color: rgb(206, 238, 250);
+  background-color: rgb(41, 41, 41);
   position: relative;
   font-size: 80px;
   text-align: center;
@@ -34,7 +38,18 @@ body {
   position: absolute;
 }
 
-.replay {
+.title {
+  margin-top: 5rem;
+  font-size: 2rem;
+  color: white;
+}
+
+.main-image {
+  width: 150px;
+  height: 150px;
+}
+
+.play {
   position: absolute;
   left: 200px;
   top: 400px;
@@ -48,7 +63,16 @@ body {
   border-radius: 10px;
 }
 
-.replay:hover {
+.play:hover {
   cursor: pointer;
   background-color: rgb(226, 47, 47);
+}
+
+.inner-score {
+  margin: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 1.5rem;
+  color: white;
 }
