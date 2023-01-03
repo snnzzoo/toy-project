@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="RPS1.css">
+  <script src="https://kit.fontawesome.com/a261e34fb9.js" crossorigin="anonymous"></script>
+  <script src="RPS1.js" defer></script>
+  <title>가위바위보</title>
+</head>
+
+<body>
+  <main>
+    <!-- 가위바위보 게임 -->
+    <section id="RPS-game">
+      <!-- computer -->
+      <div class="area">
+        <div class="gamer">
+          <i class="fa-solid fa-robot"></i>
+          computer
+        </div>
+        <div class="rsp-container computer">
+          <div class="rsp-item" data-rsp="Rock">
+            <i class="fa-regular fa-hand-back-fist"></i>
+          </div>
+          <div class="rsp-item" data-rsp="Scissor">
+            <i class="fa-regular fa-hand-scissors"></i>
+          </div>
+          <div class="rsp-item" data-rsp="Paper">
+            <i class="fa-regular fa-hand"></i>
+          </div>
+        </div>
+      </div>
+      <!-- user -->
+      <div class="area">
+        <div class="gamer">
+          <i class="fa-solid fa-user"></i>
+          user
+        </div>
+        <div class="rsp-container user">
+          <div class="rsp-item" data-rsp="Rock">
+            <i class="fa-regular fa-hand-back-fist"></i>
+          </div>
+          <div class="rsp-item" data-rsp="Scissor">
+            <i class="fa-regular fa-hand-scissors"></i>
+          </div>
+          <div class="rsp-item" data-rsp="Paper">
+            <i class="fa-regular fa-hand"></i>
+          </div>
+        </div>
+      </div>
+      <!-- score -->
+      <div class="score-box">
+        <span class="score computer">0</span> : <span class="score user">0</span>
+      </div>
+      <!-- cover -->
+      <div class="cover"></div>
+      <!-- buttons -->
+      <div class="btns">
+        <div class="btn again-btn">again</div>
+        <div class="btn reset-btn">reset</div>
+      </div>
+    </section>
+    <!-- 가위바위보 결과 -->
+    <section id="RPS-result">
+      Make Your Move!
+    </section>
+  </main>
+</body>
+
+</html>
