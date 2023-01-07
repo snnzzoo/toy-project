@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>FE 스터디 0107</title>
+    <!--css 폴더 내에 있는 main.css로 링크 걸어줌-->
+    <link rel="stylesheet" href="../css/main.css" />
+    <!--script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <!-- <script src="js/jquery-3.3.1.min.js"></script> -->
+    <script src="../js/script_main.js"></script>
+  </head>
+  <body>
+    <!-- 먼저 전체를 div.wrap으로 감싼다 -->
+    <div class="wrap">
+      <!--header-->
+      <!--header semantic tag를 넣고-->
+      <header>
+        <!--이 안에 div.inner를 주고-->
+        <div class="inner">
+          <a href="#" class="gnbBtn">
+            <span class="a"></span><span class="b"></span>
+          </a>
+          <!--로고도 링크로 감싸주고-->
+          <a href="#" class="logo">HANS</a>
+          <!--페이지 이동-->
+          <a href="#" class="contact">contact</a>
+        </div>
+      </header>
+      <!--contents-->
+      <div class="contents">
+        <section class="visual">
+          <!--비디오가 재생되면 오디오도 같이 재생될 수 있도록 muted 설정-->
+          <!--비디오가 끝나면 다시 재생될 수 있도록 loop 설정-->
+          <!--play버튼을 눌렀을때 풀화면으로 전체모드 되는것을 막기위한 playsinline 설정-->
+          <video
+            src="HansCafe.mp4"
+            class="cake"
+            autoplay
+            muted
+            loop
+            playsinline
+          >
+            <source src="HansCafe.mp4" type="video/mp4" />
+          </video>
+          <h2 class="title">HANS</h2>
+        </section>
+        <!--section.about 영역-->
+        <section class="about">
+          <div class="inner">
+            <div class="text">
+              <h2 class="title">about us</h2>
+              <p>
+                Hans<br />
+                Cafe Patisserie<br />
+              </p>
+              <a href="#">Love the moment</a>
+            </div>
+          </div>
+        </section>
+        <!--section.about 영역 끝-->
+        <!-- section.approach-->
+        <section class="approach">
+          <div class="inner">
+            <ul class="list">
+              <!--페이지가 없기 때문에 #으로 넣고-->
+              <li>
+                <a href="#"><img src="hansspace.jpg" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="hansstory.jpg" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="hansstore.jpg" alt="" /></a>
+              </li>
+              <li>
+                <a href="#"><img src="cream.jpg" alt="" /></a>
+              </li>
+            </ul>
+            <div class="fix">
+              <div class="text">
+                <h2 class="title">about us</h2>
+                <p>
+                  프리미엄 디저트 카페 HANS<br />
+                  가까운 곳에서 만나보세요<br />
+                </p>
+                <a href="#">hans</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

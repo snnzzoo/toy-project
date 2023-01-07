@@ -1,0 +1,347 @@
+/* 
+CSS 방법론 BEM(Block, Element, Modifier) 사용
+방법론: class를 기본으로 사용하였고 
+'어떤 목적으로 사용할 것인지'에 맞추어
+이름을 생성하였습니다.
+작성방식: 블록-내부요소-기능
+예시: contents-visual-title
+*/
+
+/* 한국어가 깨지지 않도록 */
+@charset "utf-8";
+/* 구글 폰트 Montserrat 사용 */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&family=Nanum+Myeongjo&display=swap");
+
+/*reset*/
+/*기본적으로 태그들이 가지고 있는 속성들이 있음. 각
+브라우저마다 속성값이 틀려서 모든 브라우저에 동일하게
+보일 수 있도록 실무 작업에서는 reset을 걸어줘야함*/
+/*모든 요소에 있는 padding을 0으로 주고, margin을 0으로 준다*/
+* {
+  padding: 0;
+  margin: 0;
+}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  font-size: inherit;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+li {
+  list-style: none;
+}
+address,
+em,
+i {
+  font-style: normal;
+}
+
+/*font-family: 'Montserrat', sans-serif;*/
+body {
+  font-family: "Nanum Myeongjo", serif;
+  font-size: 14px;
+  color: #333;
+}
+/*wrap은 overflow hidden으로 감싸주는 것이 좋음*/
+.wrap {
+  width: 100%;
+  overflow: hidden;
+}
+
+/*header*/
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background: #213135;
+  padding: 40px 0 25px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+header .inner {
+  width: 90%;
+
+  margin: 0 auto;
+}
+header .inner .logo {
+  display: inline-block;
+
+  font-size: 25px;
+  letter-spacing: 1px;
+}
+header .inner .gnbBtn {
+  display: block;
+  float: left;
+  width: 32px;
+  height: 12px;
+  position: relative;
+  margin-top: 15px;
+}
+
+header .inner .gnbBtn span {
+  background: #fff;
+  width: 100%;
+  height: 3px;
+  display: block;
+  position: absolute;
+  left: 0;
+}
+
+header .inner .gnbBtn span.a {
+  top: 0;
+}
+
+header .inner .gnbBtn span.b {
+  bottom: 0;
+}
+
+header .inner .contact {
+  display: block;
+  float: right;
+  margin-top: 10px;
+}
+
+/*contents*/
+.contents {
+  background: #fff;
+}
+.contents .visual {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+}
+.contents .visual .cake {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.contents .visual .title {
+  width: 100%;
+
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  color: #fff;
+  font-size: 70px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+/*section.ahout*/
+/*공통부분 주석처리*/
+section.about {
+  background: #f2f0eb;
+  padding: 100px 0;
+}
+/*section.about .inner {
+  width: 1400px;
+  margin: 0 auto;
+}*/
+/*section.about .inner .text {
+}*/
+/*section.about .inner .text .title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: bold;
+}*/
+section.about .inner .text p {
+  font-size: 45px;
+}
+/*section.about .inner .text a {
+  display: inline-block;
+
+  padding: 5px 15px;
+  border: 1px solid #333;
+  border-radius: 20px;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}*/
+/*section.about .inner .text a:hover,
+section.about .inner.text a:focus {
+  border: 1px solid transparent;
+  border-bottom: 1px solid #333;
+  border-radius: 0;
+  padding: 5px 18px;
+  transition: all 0.2s;
+  background: #f2f0eb;
+}*/
+/*.inner => 전체 레이아웃 넓이 공통부분*/
+.inner {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+/*.text => 텍스트 공통*/
+.text .title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.text p {
+  font-size: 35px;
+  line-height: 1.2;
+  margin: 40px 0;
+}
+.text a {
+  display: inline-block;
+
+  padding: 5px 15px;
+  border: 1px solid #333;
+  border-radius: 20px;
+  font-size: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.2s;
+}
+/*text a에 focus할때*/
+.text a:hover,
+.text a:focus {
+  border: 1px solid transparent;
+  border-bottom: 1px solid #333;
+  border-radius: 0;
+  padding: 5px 18px;
+  transition: all 0.2s;
+  background: #f2f0eb;
+}
+/*section.approach*/
+section.approach {
+  padding: 100px 0;
+}
+section.approach .inner {
+  position: relative;
+}
+section.approach .inner .list {
+  width: 48%;
+}
+section.approach .inner .list li {
+  margin-bottom: 30px;
+}
+section.approach .inner .list li:last-child {
+  margin-bottom: 0;
+}
+section.approach .inner .list li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+section.approach .inner .list li a img {
+  width: 100%;
+}
+section.approach .inner .fix {
+  position: absolute;
+  width: 45%;
+  height: 100%;
+
+  right: 0;
+  top: 0;
+}
+section.approach .inner .fix .text {
+  position: absolute;
+  bottom: 10%;
+}
+section.approach .inner .fix .text.on {
+  position: fixed;
+  bottom: 50;
+  transform: translateY(50%);
+}
