@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise 9</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- 아이콘 -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+    />
+
+    <!-- 폰트 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Noto+Sans:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- 네브바 -->
+    <nav>
+      <!-- 로고 -->
+      <div class="logo-box">
+        <img class="logo" src="images/logo.svg" alt="" />
+        <img class="logo-title" src="images/logo_title.svg" alt="" />
+      </div>
+
+      <!-- 메뉴 탭 -->
+      <ul class="taps nav-taps">
+        <li class="nav-tap tap1">
+          멤버
+          <ul class="nav-content content1">
+            <li>멤버 소개</li>
+            <li>멤버 간 캐미</li>
+          </ul>
+        </li>
+
+        <li class="nav-tap tap2">
+          음반
+          <ul class="nav-content content2">
+            <li>음반 소개</li>
+            <li>뮤직비디오</li>
+          </ul>
+        </li>
+
+        <li class="nav-tap tap3">
+          활동
+          <ul class="nav-content content3">
+            <li>YouTube</li>
+            <li>V LIVE</li>
+            <li>Weverse</li>
+            <li>음악 방송</li>
+          </ul>
+        </li>
+
+        <li class="nav-tap tap4">수상 경력</li>
+      </ul>
+
+      <!-- 아이콘 -->
+      <div class="nav-icons">
+        <div class="icon">
+          <i class="bi bi-youtube"></i>
+        </div>
+        <div class="icon">
+          <i class="bi bi-instagram"></i>
+        </div>
+      </div>
+    </nav>
+
+    <!-- 캐러셀1 -->
+    <div class="banner-container">
+      <div class="banner">
+        <img class="banner-image" src="images/banner1.jpg" alt="" />
+      </div>
+      <div class="banner">
+        <img class="banner-image" src="images/banner2.jpg" alt="" />
+      </div>
+      <div class="banner">
+        <img class="banner-image" src="images/banner3.jpg" alt="" />
+      </div>
+
+      <!-- 캐러셀 탭 -->
+      <!-- <div>
+        <ul class="taps banner-taps">
+          <li class="banner-tap">Fresh HANS</li>
+          <li class="banner-tap">New Arrivals</li>
+          <li class="banner-tap">Love the moment</li>
+        </ul>
+      </div> -->
+    </div>
+
+    <!-- 캐러셀2 -->
+    <div class="carousel-container">
+      <div class="prev-btn"></div>
+      <div class="carousel-box">
+        <div class="carousel-item">
+          <h1 class="carousel-title">DIGITAL SINGLE ALBUM</h1>
+          <div class="carousel-imagebox">
+            <img class="carousel-image" src="images/album1.svg" alt="" />
+          </div>
+          <h4 class="carousel-subtitle">디지털 싱글</h4>
+          <p class="carousel-info">fromis_9 PRE-DEBUT SINGLE</p>
+          <a class="carousel-btn" href="">+ VIEW MORE</a>
+        </div>
+
+        <div class="carousel-item">
+          <h1 class="carousel-title">THE 1st MINI ALBUM</h1>
+          <div class="carousel-imagebox">
+            <img class="carousel-image" src="images/album2.svg" alt="" />
+          </div>
+          <h4 class="carousel-subtitle">미니 1집</h4>
+          <p class="carousel-info">To. Heart</p>
+          <a class="carousel-btn" href="">+ VIEW MORE</a>
+        </div>
+
+        <div class="carousel-item">
+          <h1 class="carousel-title">THE 2nd MINI ALBUM</h1>
+          <div class="carousel-imagebox">
+            <img class="carousel-image" src="images/album3.png" alt="" />
+          </div>
+          <h4 class="carousel-subtitle">미니 2집</h4>
+          <p class="carousel-info">To. Day</p>
+          <a class="carousel-btn" href="">+ VIEW MORE</a>
+        </div>
+
+        <div class="carousel-item">
+          <h1 class="carousel-title">THE 1st SPECIAL SINGLE ALBUM</h1>
+          <div class="carousel-imagebox">
+            <img class="carousel-image" src="images/album4.svg" alt="" />
+          </div>
+          <h4 class="carousel-subtitle">스페셜 싱글</h4>
+          <p class="carousel-info">From.9</p>
+          <a class="carousel-btn" href="">+ VIEW MORE</a>
+        </div>
+
+        <div class="carousel-item">
+          <h1 class="carousel-title">THE 1st SINGLE ALBUM</h1>
+          <div class="carousel-imagebox">
+            <img class="carousel-image" src="images/album5.svg" alt="" />
+          </div>
+          <h4 class="carousel-subtitle">싱글 1집</h4>
+          <p class="carousel-info">FUN FACTORY</p>
+          <a class="carousel-btn" href="">+ VIEW MORE</a>
+        </div>
+
+        <div class="carousel-item">
+          <h1 class="carousel-title">THE 3rd MINI ALBUM</h1>
+          <div class="carousel-imagebox">
+            <img class="carousel-image" src="images/album6.svg" alt="" />
+          </div>
+          <h4 class="carousel-subtitle">미니 3집</h4>
+          <p class="carousel-info">My Little Society</p>
+          <a class="carousel-btn" href="">+ VIEW MORE</a>
+        </div>
+
+        <div class="carousel-item">
+          <h1 class="carousel-title">THE 2nd SINGLE ALBUM</h1>
+          <div class="carousel-imagebox">
+            <img class="carousel-image" src="images/album7.svg" alt="" />
+          </div>
+          <h4 class="carousel-subtitle">싱글 2집</h4>
+          <p class="carousel-info">9 WAY TICKET</p>
+          <a class="carousel-btn" href="">+ VIEW MORE</a>
+        </div>
+
+        <div class="carousel-item">
+          <h1 class="carousel-title">THE 2nd SPECIAL SINGLE ALBUM</h1>
+          <div class="carousel-imagebox">
+            <img class="carousel-image" src="images/album8.svg" alt="" />
+          </div>
+          <h4 class="carousel-subtitle">스페셜 싱글</h4>
+          <p class="carousel-info">Talk & Talk</p>
+          <a class="carousel-btn" href="">+ VIEW MORE</a>
+        </div>
+
+        <div class="carousel-item">
+          <h1 class="carousel-title">THE 4th MINI ALBUM</h1>
+          <div class="carousel-imagebox">
+            <img class="carousel-image" src="images/album9.svg" alt="" />
+          </div>
+          <h4 class="carousel-subtitle">미니 4집</h4>
+          <p class="carousel-info">Midnight Guest</p>
+          <a class="carousel-btn" href="">+ VIEW MORE</a>
+        </div>
+
+        <div class="carousel-item">
+          <h1 class="carousel-title">THE 5th MINI ALBUM</h1>
+          <div class="carousel-imagebox">
+            <img class="carousel-image" src="images/album10.svg" alt="" />
+          </div>
+          <h4 class="carousel-subtitle">미니 5집</h4>
+          <p class="carousel-info">from our Memento Box</p>
+          <a class="carousel-btn" href="">+ VIEW MORE</a>
+        </div>
+      </div>
+      <div class="next-btn"></div>
+    </div>
+
+    <!-- 이미지들 -->
+    <div class="image-container">
+      <div class="image-box">
+        <div class="image member1"></div>
+        <div class="image member2"></div>
+        <div class="image member3"></div>
+        <div class="image member4"></div>
+        <div class="image member5"></div>
+        <div class="image member6"></div>
+        <div class="image member7"></div>
+        <div class="image member8"></div>
+        <div class="image"></div>
+      </div>
+    </div>
+
+    <footer>
+      <div></div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
