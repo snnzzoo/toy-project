@@ -5,10 +5,6 @@
 ## 클론 코딩 - JEJU BEER ⭐️
 
 <br>
-
-![가짜 JEJU BEER 움짤](../5%EC%A3%BC%EC%B0%A8_TetrisGame/images/%ED%85%8C%ED%8A%B8%EB%A6%AC%EC%8A%A4.gif)
-
-<br>
 <hr>
 <br>
 
